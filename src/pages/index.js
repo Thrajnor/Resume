@@ -2,12 +2,12 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import Paper from '../components/paper'
-import Avatar from '@material-ui/core/Avatar'
+import Avatar from '../components/avatar'
 
 const IndexPage = () => (
   <Layout>
     <Paper>
-      <Avatar alt='Marcin' src={require('../images/AvatarCV.png')}/>
+      <Avatar gridSize='6' alt='Marcin' src={require('../images/AvatarCV.png')}/>
     </Paper>
   </Layout>
 )
