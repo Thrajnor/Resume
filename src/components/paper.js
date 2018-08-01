@@ -1,17 +1,39 @@
 import React from 'react';
 import MaterialPaper from '@material-ui/core/Paper';
+import propTypes from 'prop-types';
+import Grid from '@material-ui/core/Grid';
+import { withStyles } from '@material-ui/core/styles';
 
-const Paper = ({children, data}) => {
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+    margin: '1.5rem auto',
+    width: '21cm',
+    height: '29.7cm',
+  },
+  paper: {
+    padding: theme.spacing.unit * 2,
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+});
+
+const Paper = (props) => {
+  const { classes } = props
   return (
     <MaterialPaper
-    style={{
-      margin: '2px auto',
-      width: '21cm',
-      height: '29.7cm',
-    }}>
-      {children}
+    className={classes.root}
+    >
+      <Grid container spacing={24}>
+        {props.children}
+      </Grid>
     </MaterialPaper>
   )
 }
 
-export default Paper
+
+Paper.propTypes = {
+  classes: propTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Paper)
