@@ -6,6 +6,7 @@ import Avatar from '../components/header/avatar'
 import Contact from '../components/header/contact'
 import Header from '../components/header/header';
 import Paragraph from '../components/header/paragraph';
+import Divider from '../components/base/divider';
 
 const IndexPage = () => (
   <Layout>
@@ -19,6 +20,7 @@ const IndexPage = () => (
                Home='Wrocław, Poland' 
                Phone='123 456 789'/>
       <Paragraph gridSize='12'>Proactive and ready to work right away.</Paragraph>
+      <Divider gridSize='12' title='Skills'/>
     </Paper>
   </Layout>
 )
