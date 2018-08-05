@@ -4,6 +4,7 @@ import Layout from '../components/layout/layout'
 import Paper from '../components/base/paper'
 import Avatar from '../components/header/avatar'
 import Contact from '../components/header/contact'
+import Header from '../components/header/header';
 
 const IndexPage = () => (
   <Layout>
