@@ -5,6 +5,7 @@ import Paper from '../components/base/paper'
 import Avatar from '../components/header/avatar'
 import Contact from '../components/header/contact'
 import Header from '../components/header/header';
+import Paragraph from '../components/header/paragraph';
 
 const IndexPage = () => (
   <Layout>
@@ -17,6 +18,7 @@ const IndexPage = () => (
                Github='github.com/Thrajnor' 
                Home='Wrocław, Poland' 
                Phone='123 456 789'/>
+      <Paragraph gridSize='12'>Proactive and ready to work right away.</Paragraph>
     </Paper>
   </Layout>
 )
