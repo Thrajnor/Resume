@@ -1,15 +1,14 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import Paper from '../components/paper'
-import Avatar from '../components/avatar'
-import Contact from '../components/contact'
+import Layout from '../components/layout/layout'
+import Paper from '../components/base/paper'
+import Avatar from '../components/header/avatar'
 
 const IndexPage = () => (
   <Layout>
     <Paper>
-      <Avatar gridSize='6' alt='Marcin' src={require('../images/AvatarCV.png')}/>
-      <Contact gridSize='6' Mail='protonmail.com' LinkedIn='linkedin.com' Github='github.com' Home='Poland' Phone='123 456 789'/>
+      <Avatar gridSize='3' alt='Marcin' src={require('../images/AvatarCV.png')}/>
+      <Header gridSize='3' disc='Web Developer'>Marcin Zaborowski</Header>
     </Paper>
   </Layout>
 )
