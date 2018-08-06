@@ -8,6 +8,7 @@ import Header from '../components/header/header';
 import Paragraph from '../components/body/paragraph';
 import Divider from '../components/base/divider';
 import Skills from '../components/body/skills';
+import Footer from '../components/body/footer';
 import ButtonBase from '@material-ui/core/ButtonBase';
 
 const IndexPage = () => (
@@ -56,5 +57,6 @@ const IndexPage = () => (
     </Paper>
   </Layout>
 )
+        <Footer gridSize='12' disc='I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the Personal Data Protection Act as of 29 August 1997, consolidated text: Journal of Laws 2016, item 922 as amended.' powered='Powered by React' poweredIcon={<i className="fab fa-react"></i>} />
 
 export default IndexPage

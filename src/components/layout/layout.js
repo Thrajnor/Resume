@@ -41,6 +41,10 @@ const theme = createMuiTheme({
     button: {
       fontStyle: 'italic',
     },
+    caption: {
+      fontSize: '.55rem',
+      fontStyle: 'italic',
+    }
   },
 });
 
