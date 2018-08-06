@@ -27,22 +27,22 @@ const theme = createMuiTheme({
     ].join(','),
     fontWeightMedium: 500,
     body1: {
-      fontSize: '.95rem',
+      fontSize: '.9rem',
       fontWeight: 700,
     },
     body2: {
-      fontSize: '.75rem',
+      fontSize: '.7rem',
       fontWeight: 400,
     },
     subheading: {
-      fontSize: '.78rem',
+      fontSize: '.7rem',
       fontStyle: 'italic',
     },
     button: {
       fontStyle: 'italic',
     },
     caption: {
-      fontSize: '.55rem',
+      fontSize: '.52rem',
       fontStyle: 'italic',
     }
   },

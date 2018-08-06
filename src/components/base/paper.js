@@ -10,7 +10,8 @@ const styles = theme => ({
     margin: '1.5rem auto',
     width: '726px',
     height: '1055px',
-    padding: '1.5rem',
+    padding: '1.2rem',
+    position: 'relative',
   },
   paper: {
     padding: theme.spacing.unit * 2,

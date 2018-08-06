@@ -25,7 +25,7 @@ const styles = theme => ({
     color: '#0077B5',
   },
   Home: {
-    color: '#999',
+    color: '#333',
   },
   Mail: {
     color: '#313335',
