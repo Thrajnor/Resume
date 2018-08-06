@@ -49,10 +49,10 @@ const Contact = (props) => {
           <Typo className={classes.Mail} variant='subheading'>{props.Mail} <i className="fas fa-at"></i></Typo>
         </ListItem>
         <ListItem button className={classes.listItem}>
-          <a href={props.link}><Typo className={classes.LinkedIn} variant='subheading'>{props.LinkedIn} <i className="fab fa-linkedin"></i></Typo></a>
+          <a href={links.LinkedIn}><Typo className={classes.LinkedIn} variant='subheading'>{props.LinkedIn} <i className="fab fa-linkedin"></i></Typo></a>
         </ListItem>
         <ListItem button className={classes.listItem}>
-          <a href={props.link}><Typo className={classes.Github} variant='subheading'>{props.Github} <i className="fab fa-github"></i></Typo></a>
+          <a href={links.Github}><Typo className={classes.Github} variant='subheading'>{props.Github} <i className="fab fa-github"></i></Typo></a>
         </ListItem>
         <ListItem button className={classes.listItem}>
           <a href={links.Maps}><Typo className={classes.Home} variant='subheading'>{props.Home} <i className="fas fa-map-marker-alt"></i></Typo></a>
