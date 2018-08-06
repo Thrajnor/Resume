@@ -5,7 +5,7 @@ import Paper from '../components/base/paper'
 import Avatar from '../components/header/avatar'
 import Contact from '../components/header/contact'
 import Header from '../components/header/header';
-import Paragraph from '../components/header/paragraph';
+import Paragraph from '../components/body/paragraph';
 import Divider from '../components/base/divider';
 import Skills from '../components/body/skills';
 
@@ -20,7 +20,7 @@ const IndexPage = () => (
                Github='github.com/Thrajnor' 
                Home='Wrocław, Poland' 
                Phone='123 456 789'/>
-      <Paragraph gridSize='12'>i'm proactive and eager to learn new things through work.</Paragraph>
+      <Paragraph gridSize='12' subheading="i'm proactive and eager to learn new things through work." />
       <Divider gridSize='12' icon={<i className="fas fa-cogs"></i>} title='Skills'/>
         <Skills gridSize='3' skills={[
             {icon:<i className="fab fa-html5"></i>, name: 'Html5', experience: '4'},
@@ -38,6 +38,7 @@ const IndexPage = () => (
             {icon:'', name: 'Polish', experience: '5'},
           ]} />
       <Divider gridSize='12' icon={<i className="fas fa-code"></i>} title='Work Experience'/>
+        <Paragraph gridSize='12' title='Freelancing' subheading='(07/2018 – Present)' />
       <Divider gridSize='12' icon={<i className="fas fa-check-circle"></i>} title='Certificates'/>
       <Divider gridSize='12' icon={<i className="far fa-handshake"></i>} title='Soft Skills'/>
     </Paper>
