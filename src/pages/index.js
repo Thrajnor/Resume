@@ -22,7 +22,7 @@ const IndexPage = () => (
                Phone='123 456 789'/>
       <Paragraph gridSize='12'>i'm proactive and eager to learn new things through work.</Paragraph>
       <Divider gridSize='12' icon={<i className="fas fa-cogs"></i>} title='Skills'/>
-        <Skills gridSize='6' skills={[
+        <Skills gridSize='3' skills={[
             {icon:<i className="fab fa-html5"></i>, name: 'Html5', experience: '4'},
             {icon:<i className="fab fa-css3-alt"></i>, name: 'Css3', experience: '4'},
             {icon:<i className="fab fa-git-square"></i>, name: 'Git', experience: '3'},
@@ -33,6 +33,10 @@ const IndexPage = () => (
             {icon:<i className="fab fa-vuejs"></i>, name: 'VueJS', experience: '2'},
           ]} />
       <Divider gridSize='12' icon={<i className="fas fa-comments"></i>} title='Languages'/>
+        <Skills gridSize='6' skills={[
+            {icon:'', name: 'English', experience: '5'},
+            {icon:'', name: 'Polish', experience: '5'},
+          ]} />
       <Divider gridSize='12' icon={<i className="fas fa-code"></i>} title='Work Experience'/>
       <Divider gridSize='12' icon={<i className="fas fa-check-circle"></i>} title='Certificates'/>
       <Divider gridSize='12' icon={<i className="far fa-handshake"></i>} title='Soft Skills'/>

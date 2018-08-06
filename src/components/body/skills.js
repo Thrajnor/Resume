@@ -30,6 +30,9 @@ const Skills = (props) => {
   const experience = (num) => {
     let checked = [] 
     let unchecked = []
+    if (num == 0) {
+      return
+    }
     for(let i = 0; i < num; i++) {
       checked.push(<i className="material-icons" key={i}>radio_button_checked</i>)
     }
