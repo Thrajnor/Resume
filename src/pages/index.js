@@ -43,9 +43,15 @@ const IndexPage = () => (
       <Divider gridSize='12' icon={<i className="fas fa-check-circle"></i>} title='Certificates'/>
         <Paragraph gridSize='12' title='The Web Developer Bootcamp' subTitle='(09 May 2018)' subheading={<ButtonBase><a href='https://www.ude.my/UC-ENB0NKS0'>https://www.ude.my/UC-ENB0NKS0</a></ButtonBase>} />
       <Divider gridSize='12' icon={<i className="far fa-lightbulb"></i>} title='Intrests'/>
-        <Skills gridSize='6' skills={[
-            {icon:<i className="fas fa-code"></i>, name: 'Coding', experience: ''},
-            {icon:'', name: 'Polish', experience: ''},
+        <Skills gridSize='3' skills={[
+            {variant: 'body2', icon:'', name: 'Coding', experience: ''},
+            {variant: 'body2', icon:'', name: 'Scouting', experience: ''},
+            {variant: 'body2', icon:'', name: 'Cooking', experience: ''},
+            {variant: 'body2', icon:'', name: 'Veganism', experience: ''},
+            {variant: 'body2', icon:'', name: 'Psychology', experience: ''},
+            {variant: 'body2', icon:'', name: 'Hiking', experience: ''},
+            {variant: 'body2', icon:'', name: 'Gaming', experience: ''},
+            {variant: 'body2', icon:'', name: 'Technology', experience: ''},
           ]} />
     </Paper>
   </Layout>
