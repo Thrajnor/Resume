@@ -37,10 +37,11 @@ progress {
 template {
   display: none;
 }
-a {
+a, a:hover, a:visited, a:link, a:active {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: inherit;
 }
 a:active,
 a:hover {
