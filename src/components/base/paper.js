@@ -8,8 +8,8 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     margin: '1.5rem auto',
-    width: '21cm',
-    height: '29.7cm',
+    width: '726px',
+    height: '1055px',
     padding: '1.5rem',
   },
   paper: {
