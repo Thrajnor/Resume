@@ -1,21 +1,30 @@
 import React from 'react';
-import propTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typo from '@material-ui/core/Typography';
-import MaterialDivider from '@material-ui/core/Divider';
+import { withStyles } from '@material-ui/core/styles';
+import propTypes from 'prop-types';
 
-const Header = (props) => {
+const styles = {
+  divider: {
+    border: '0',
+    height: '2px',
+    backgroundImage: 'linear-gradient(to right, #fff, rgba(0, 0, 0, 1), #fff)',
+    marginLeft: '5%',
+  }
+}
+
+const Divider = (props) => {
+  const { classes } = props
   return (
     <Grid item xs={Number(props.gridSize)}>
         <Typo>{props.icon} {props.title}</Typo>
-        <MaterialDivider inset />
-        {props.children}
+        <hr className={classes.divider} />
     </Grid>
   )
 }
 
-Header.propTypes = {
+Divider.propTypes = {
   classes: propTypes.object.isRequired,
 };
 
-export default Header
+export default withStyles(styles)(Divider)
