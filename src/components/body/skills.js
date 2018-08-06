@@ -30,7 +30,7 @@ const Skills = (props) => {
   const experience = (num) => {
     let checked = [] 
     let unchecked = []
-    if (num == 0) {
+    if (num === '') {
       return
     }
     for(let i = 0; i < num; i++) {
