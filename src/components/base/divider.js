@@ -10,6 +10,7 @@ const styles = {
     height: '2px',
     backgroundImage: 'linear-gradient(to right, #fff, rgba(0, 0, 0, 1), #fff)',
     marginLeft: '5%',
+    marginBottom: '0',
   }
 }
 
