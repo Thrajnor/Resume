@@ -20,7 +20,12 @@ const IndexPage = () => (
                Home='Wrocław, Poland' 
                Phone='123 456 789'/>
       <Paragraph gridSize='12'>Proactive and ready to work right away.</Paragraph>
-      <Divider gridSize='12' title='Skills'/>
+      <Divider gridSize='12' icon={<i class="fas fa-cogs"></i>} title='Skills'>
+      </Divider>
+      <Divider gridSize='12' icon={<i class="fas fa-comments"></i>} title='Languages'/>
+      <Divider gridSize='12' icon={<i class="fas fa-code"></i>} title='Work Experience'/>
+      <Divider gridSize='12' icon={<i class="fas fa-check-circle"></i>} title='Certificates'/>
+      <Divider gridSize='12' icon={<i class="far fa-handshake"></i>} title='Soft Skills'/>
     </Paper>
   </Layout>
 )
