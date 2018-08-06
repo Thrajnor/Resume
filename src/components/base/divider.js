@@ -18,7 +18,7 @@ const Divider = (props) => {
   const { classes } = props
   return (
     <Grid item xs={Number(props.gridSize)}>
-        <Typo>{props.icon} {props.title}</Typo>
+        <Typo variant='title'>{props.icon} {props.title}</Typo>
         <hr className={classes.divider} />
     </Grid>
   )

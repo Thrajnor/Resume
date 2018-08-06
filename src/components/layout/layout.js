@@ -27,8 +27,12 @@ const theme = createMuiTheme({
     ].join(','),
     fontWeightMedium: 500,
     body1: {
-      fontSize: '1.1rem',
+      fontSize: '.95rem',
       fontWeight: 700,
+    },
+    body2: {
+      fontSize: '.75rem',
+      fontWeight: 400,
     },
     subheading: {
       fontSize: '.78rem',
