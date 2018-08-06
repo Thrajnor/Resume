@@ -13,6 +13,7 @@ const theme = createMuiTheme({
   typography: {
     // Use the system font instead of the default Roboto font.
     fontFamily: [
+      'Merienda',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
@@ -26,13 +27,11 @@ const theme = createMuiTheme({
     ].join(','),
     fontWeightMedium: 500,
     body1: {
-      fontFamily: '"Merienda" cursive',
       fontSize: '1.1rem',
       fontWeight: 700,
     },
     subheading: {
-      fontFamily: '"Merienda" cursive',
-      fontSize: '.65rem',
+      fontSize: '.78rem',
       fontStyle: 'italic',
     },
     button: {
