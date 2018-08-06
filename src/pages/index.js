@@ -41,6 +41,11 @@ const IndexPage = () => (
         <Paragraph gridSize='12' title='Freelancing' subheading='(07/2018 – Present)' />
       <Divider gridSize='12' icon={<i className="fas fa-check-circle"></i>} title='Certificates'/>
       <Divider gridSize='12' icon={<i className="far fa-handshake"></i>} title='Soft Skills'/>
+      <Divider gridSize='12' icon={<i className="far fa-lightbulb"></i>} title='Intrests'/>
+        <Skills gridSize='6' skills={[
+            {icon:<i className="fas fa-code"></i>, name: 'Coding', experience: ''},
+            {icon:'', name: 'Polish', experience: ''},
+          ]} />
     </Paper>
   </Layout>
 )
