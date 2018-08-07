@@ -36,33 +36,18 @@ const styles = theme => ({
   },
   Github: {
     color: '#6e5494',
-    [theme.breakpoints.down('lg')]: {
-      fontSize: '1.4rem'
-    },
   },
   LinkedIn: {
-    color: '#0077B5',
-    [theme.breakpoints.down('lg')]: {
-      color: 'red'
-    },
+    color: '#0077B5', 
   },
   Home: {
     color: '#333',
-    [theme.breakpoints.down('lg')]: {
-      fontSize: '1.4rem'
-    },
   },
   Mail: {
     color: '#313335',
-    [theme.breakpoints.down('lg')]: {
-      fontSize: '1.4rem'
-    },
   },
   Phone: {
     color: '#313335',
-    [theme.breakpoints.down('lg')]: {
-      fontSize: '1.4rem'
-    },
   },
 });
 
@@ -96,10 +81,10 @@ class Contact extends React.Component {
 
     let lists
 
-    if (typeof window !== 'undefined' && this.state.width < 650 ) {
+    if (typeof window !== 'undefined' && this.state.width < 672 ) {
       lists = (
         <>
-        <Grid item xs>
+        <Grid item xs={4} sm>
           <List component="nav" className={classes.Contact}>
             <ListItem button className={classes.listItem}>
               <a href={links.LinkedIn}><Typo className={classes.LinkedIn} variant='display2'><i className={["fab fa-linkedin", classes.bigIcon].join(' ')}></i></Typo></a>

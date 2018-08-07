@@ -9,9 +9,9 @@ const styles = theme => ({
     flexGrow: 1,
     margin: '4rem auto',
     maxWidth: '79.3688rem',
-    minWidth: '28.8rem',
+    minWidth: '30.5781rem',
     minHeight: '112.252rem',
-    padding: '2rem',
+    padding: '3rem',
     position: 'relative',
   },
 });

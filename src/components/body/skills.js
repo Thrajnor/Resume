@@ -8,11 +8,14 @@ import Typo from '@material-ui/core/Typography';
 
 const styles = theme => ({
   text: {
-    textAlign: 'left'
+    textAlign: 'left',
   },
   Experience: {
-    marginLeft: '1rem',
-    float: 'right'
+    float: 'right',
+    [theme.breakpoints.up('lg')]: {
+      marginLeft: '2rem',
+      fontSize: '1rem !important'
+    },
   }
 });
 
@@ -52,14 +55,17 @@ const Skills = (props) => {
   // make list of skills
   const skills = skillsArray.map((skill) => {
     return (
-      <Grid item xs={Number(props.gridSize)} key={skill.name}>
-        <Typo className={classes.text} variant={skill.variant}>{skill.icon} {skill.name} {experience(skill.experience)}</Typo>
+      <Grid item xs={Number(props.gridSizeXS)} sm={Number(props.gridSizeSM)} md={Number(props.gridSize)} key={skill.name}>
+        <Typo className={classes.text} variant={skill.variant}>
+          {skill.icon} {skill.name} 
+          {experience(skill.experience)}
+        </Typo>
       </Grid>
     )
   })
   return (
     <Grid item xs={12}>
-      <Grid container spacing={16}>
+      <Grid container spacing={0}>
         {skills}
       </Grid>
     </Grid>

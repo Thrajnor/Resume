@@ -20,7 +20,7 @@ const theme = createMuiTheme({
   breakpoints: {
     values: {
       lg: 775,
-      md: 650,
+      md: 672,
       sm: 455
     }
   },
@@ -40,6 +40,11 @@ const theme = createMuiTheme({
       '"Segoe UI Symbol"',
     ].join(','),
     fontWeightMedium: 500,
+    display3: {
+      fontSize: '1.97rem',
+      fontWeight: 700,
+      color: '#222'
+    },
     display2: {
       fontSize: '1.6rem',
       fontStyle: 'italic',
@@ -74,6 +79,7 @@ const theme = createMuiTheme({
     caption: {
       fontSize: '1.1rem',
       fontStyle: 'italic',
+      padding: '1rem'
     }
   },
 });
