@@ -5,9 +5,13 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
+  AvatarContainer: {
+    maxWidth: '100%',
+    height: 'auto',
+  },
   Avatar: {
-    width: 150,
-    height: 150,
+    width: '100%',
+    height: '100%',
     margin: 0,
   }
 });
@@ -15,8 +19,10 @@ const styles = theme => ({
 const Avatar = (props) => {
   const { classes } = props
   return (
-    <Grid item xs={Number(props.gridSize)}>
-      <MaterialAvatar className={classes.Avatar} alt={props.alt} src={props.src}/>
+    <Grid item xs={Number(props.gridSize)} className={classes.AvatarContainer}>
+      <div className={classes.AvatarContainer}>
+        <MaterialAvatar className={classes.Avatar} alt={props.alt} src={props.src}/>
+      </div>
     </Grid>
   )
 }
