@@ -79,7 +79,6 @@ const theme = createMuiTheme({
     caption: {
       fontSize: '1.1rem',
       fontStyle: 'italic',
-      padding: '1rem'
     }
   },
 });
