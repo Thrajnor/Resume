@@ -7,7 +7,7 @@ import propTypes from 'prop-types';
 const styles = {
   divider: {
     border: '0',
-    height: '2px',
+    height: '.2rem',
     backgroundImage: 'linear-gradient(to right, #fff, rgba(0, 0, 0, 1), #fff)',
     marginLeft: '5%',
     marginBottom: '0',
