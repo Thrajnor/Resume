@@ -7,7 +7,7 @@ import propTypes from 'prop-types';
 const styles = theme => ({
   subTitle: {
     fontWeight: '400',
-    fontSize: '0.85rem',
+    fontSize: '1.5rem',
   },
 });
 

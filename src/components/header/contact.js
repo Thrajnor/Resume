@@ -46,19 +46,19 @@ const Contact = (props) => {
     <Grid item xs={Number(props.gridSize)}>
       <List component="nav" className={classes.Contact}>
         <ListItem className={classes.listItem}>
-          <Typo className={classes.Mail} variant='subheading'>{props.Mail} <i className="fas fa-at"></i></Typo>
+          <Typo className={classes.Mail} variant='display2'>{props.Mail} <i className="fas fa-at"></i></Typo>
         </ListItem>
         <ListItem button className={classes.listItem}>
-          <a href={links.LinkedIn}><Typo className={classes.LinkedIn} variant='subheading'>{props.LinkedIn} <i className="fab fa-linkedin"></i></Typo></a>
+          <a href={links.LinkedIn}><Typo className={classes.LinkedIn} variant='display2'>{props.LinkedIn} <i className="fab fa-linkedin"></i></Typo></a>
         </ListItem>
         <ListItem button className={classes.listItem}>
-          <a href={links.Github}><Typo className={classes.Github} variant='subheading'>{props.Github} <i className="fab fa-github"></i></Typo></a>
+          <a href={links.Github}><Typo className={classes.Github} variant='display2'>{props.Github} <i className="fab fa-github"></i></Typo></a>
         </ListItem>
         <ListItem button className={classes.listItem}>
-          <a href={links.Maps}><Typo className={classes.Home} variant='subheading'>{props.Home} <i className="fas fa-map-marker-alt"></i></Typo></a>
+          <a href={links.Maps}><Typo className={classes.Home} variant='display2'>{props.Home} <i className="fas fa-map-marker-alt"></i></Typo></a>
         </ListItem>
         <ListItem className={classes.listItem}>
-          <Typo className={classes.Phone} variant='subheading'>{props.Phone} <i className="fas fa-mobile-alt"></i></Typo>
+          <Typo className={classes.Phone} variant='display2'>{props.Phone} <i className="fas fa-mobile-alt"></i></Typo>
         </ListItem>
       </List>
     </Grid>
