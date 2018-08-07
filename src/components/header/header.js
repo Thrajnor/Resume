@@ -5,8 +5,8 @@ import Typo from '@material-ui/core/Typography';
 const Header = (props) => {
   return (
     <Grid item xs={Number(props.gridSize)}>
-      <Typo variant='title'> {props.children} </Typo>
-      <Typo variant='subheading'>{props.disc}</Typo>
+      <Typo variant='headline'> {props.children} </Typo>
+      <Typo variant='display1'>{props.disc}</Typo>
     </Grid>
   )
 }
