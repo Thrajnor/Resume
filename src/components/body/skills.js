@@ -13,8 +13,7 @@ const styles = theme => ({
   Experience: {
     float: 'right',
     [theme.breakpoints.up('lg')]: {
-      marginLeft: '2rem',
-      fontSize: '1rem !important'
+      marginLeft: '2rem'
     },
   }
 });
