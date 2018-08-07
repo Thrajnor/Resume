@@ -14,8 +14,8 @@ const styles = theme => ({
   listItem: {
     textAlign: 'right',
     display: 'list-item',
-    padding: theme.spacing.unit * .1,
-    marginBottom: theme.spacing.unit * .1,
+    padding: '.08rem',
+    marginBottom: '.08rem',
     color: '#fff'
   },
   Github: {
