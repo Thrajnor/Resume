@@ -7,8 +7,22 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import './layout.css'
 
 const theme = createMuiTheme({
+  props: {
+    // withWidth component ⚛️
+    MuiWithWidth: {
+      // Initial width property
+      initialWidth: 'lg', // Breakpoint being globally set 🌎!
+    },
+  },
   palette: {
     primary:{ main: '#6e5494' }
+  },
+  breakpoints: {
+    values: {
+      lg: 775,
+      md: 650,
+      sm: 455
+    }
   },
   typography: {
     // Use the system font instead of the default Roboto font.
@@ -27,11 +41,12 @@ const theme = createMuiTheme({
     ].join(','),
     fontWeightMedium: 500,
     display2: {
-      fontSize: '1.7rem',
+      fontSize: '1.6rem',
       fontStyle: 'italic',
+      height: '2rem'
     },
     display1: {
-      fontSize: '1.8rem',
+      fontSize: '1.7rem',
       fontStyle: 'italic',
     },
     body1: {
@@ -39,7 +54,7 @@ const theme = createMuiTheme({
       fontWeight: 700,
     },
     headline: {
-      fontSize: '2.8rem',
+      fontSize: '2.7rem',
       fontWeight: 700,
     },
     title: {
@@ -50,7 +65,7 @@ const theme = createMuiTheme({
       fontWeight: 400,
     },
     subheading: {
-      fontSize: '1.6rem',
+      fontSize: '1.7rem',
       fontStyle: 'italic',
     },
     button: {
