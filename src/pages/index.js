@@ -44,7 +44,7 @@ const IndexPage = () => {
           <Paragraph gridSize='12' title='Freelancing' subTitle='(July 2018 – Present)' />
         <Divider gridSize='12' icon={<i className="fas fa-check-circle"></i>} title='Certificates'/>
           <Paragraph gridSize='12' title='The Web Developer Bootcamp' subTitle='(09 May 2018)' subheading={<ButtonBase><a href='https://www.ude.my/UC-ENB0NKS0'>https://www.ude.my/UC-ENB0NKS0</a></ButtonBase>} />
-        <Divider gridSize='12' icon={<i className="far fa-lightbulb"></i>} title='Intrests'/>
+        <Divider gridSize='12' icon={<i className="far fa-lightbulb"></i>} title='Interests'/>
           <Skills gridSize='3' skills={[
               {variant: 'body2', icon:'', name: 'Coding', experience: ''},
               {variant: 'body2', icon:'', name: 'Scouting', experience: ''},
