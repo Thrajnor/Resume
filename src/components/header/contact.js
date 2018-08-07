@@ -9,64 +9,154 @@ import Typo from '@material-ui/core/Typography';
 
 
 const styles = theme => ({
+  bigIcon: {
+    fontSize: '3rem',
+    lineHeight: '3rem',
+  },
   Contact: {
+    paddingBottom: '0'
   },
   listItem: {
     textAlign: 'right',
     display: 'list-item',
-    padding: '.08rem',
-    marginBottom: '.08rem',
+    padding: '0px',
+    marginBottom: '1.5rem',
     color: '#fff'
+  },
+  root: {
+    [theme.breakpoints.up('sm')]: {
+      textAlign: 'center'
+    },
+    [theme.breakpoints.down('sm')]: {
+      textAlign: 'center'
+    },
+  },
+  lastListItem: {
+    marginBottom: '0px',
   },
   Github: {
     color: '#6e5494',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.4rem'
+    },
   },
   LinkedIn: {
     color: '#0077B5',
+    [theme.breakpoints.down('lg')]: {
+      color: 'red'
+    },
   },
   Home: {
     color: '#333',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.4rem'
+    },
   },
   Mail: {
     color: '#313335',
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.4rem'
+    },
   },
   Phone: {
     color: '#313335',
-  }
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.4rem'
+    },
+  },
 });
 
-const Contact = (props) => {
-  const { classes } = props
-  const links = {
-    LinkedIn: 'https://www.linkedin.com/in/marcin-zaborowski/',
-    Github: 'https://github.com/Thrajnor',
-    Maps: 'https://www.google.pl/maps/place/Wroc%C5%82aw/@51.1267432,16.7116858,10z/data=!3m1!4b1!4m5!3m4!1s0x470fe9c2d4b58abf:0xb70956aec205e0f5!8m2!3d51.1078852!4d17.0385376',
+class Contact extends React.Component {
+  state = {
+    width: 0, height: 0
   }
-  return (
-    <Grid item xs={Number(props.gridSize)}>
-      <List component="nav" className={classes.Contact}>
-        <ListItem className={classes.listItem}>
-          <Typo className={classes.Mail} variant='display2'>{props.Mail} <i className="fas fa-at"></i></Typo>
-        </ListItem>
-        <ListItem button className={classes.listItem}>
-          <a href={links.LinkedIn}><Typo className={classes.LinkedIn} variant='display2'>{props.LinkedIn} <i className="fab fa-linkedin"></i></Typo></a>
-        </ListItem>
-        <ListItem button className={classes.listItem}>
-          <a href={links.Github}><Typo className={classes.Github} variant='display2'>{props.Github} <i className="fab fa-github"></i></Typo></a>
-        </ListItem>
-        <ListItem button className={classes.listItem}>
-          <a href={links.Maps}><Typo className={classes.Home} variant='display2'>{props.Home} <i className="fas fa-map-marker-alt"></i></Typo></a>
-        </ListItem>
-        <ListItem className={classes.listItem}>
-          <Typo className={classes.Phone} variant='display2'>{props.Phone} <i className="fas fa-mobile-alt"></i></Typo>
-        </ListItem>
-      </List>
-    </Grid>
-  )
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+  
+  updateWindowDimensions = () => {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
+  render() {
+    const { classes } = this.props
+    const links = {
+      LinkedIn: 'https://www.linkedin.com/in/marcin-zaborowski/',
+      Github: 'https://github.com/Thrajnor',
+      Maps: 'https://www.google.pl/maps/place/Wroc%C5%82aw/@51.1267432,16.7116858,10z/data=!3m1!4b1!4m5!3m4!1s0x470fe9c2d4b58abf:0xb70956aec205e0f5!8m2!3d51.1078852!4d17.0385376',
+    }
+
+    // render conditionally
+
+    let lists
+
+    if (typeof window !== 'undefined' && this.state.width < 650 ) {
+      lists = (
+        <>
+        <Grid item xs>
+          <List component="nav" className={classes.Contact}>
+            <ListItem button className={classes.listItem}>
+              <a href={links.LinkedIn}><Typo className={classes.LinkedIn} variant='display2'><i className={["fab fa-linkedin", classes.bigIcon].join(' ')}></i></Typo></a>
+            </ListItem>
+            <ListItem button className={classes.listItem}>
+              <a href={links.Github}><Typo className={classes.Github} variant='display2'><i className={["fab fa-github", classes.bigIcon].join(' ')}></i></Typo></a>
+            </ListItem>
+          </List>
+        </Grid>
+        <Grid item xs={12}>
+          <List component="nav" className={classes.Contact}>
+            <ListItem className={classes.listItem}>
+              <Typo className={[classes.Mail, classes.root].join(' ')} variant='display2'>{this.props.Mail} <i className="fas fa-at"></i></Typo>
+            </ListItem>
+            <ListItem button className={classes.listItem}>
+              <a href={links.Maps}><Typo className={[classes.Home, classes.root].join(' ')} variant='display2'>{this.props.Home} <i className="fas fa-map-marker-alt"></i></Typo></a>
+            </ListItem>
+            <ListItem className={[classes.listItem, classes.lastListItem].join(' ')}>
+              <Typo className={[classes.Phone, classes.root].join(' ')} variant='display2'>{this.props.Phone} <i className="fas fa-mobile-alt"></i></Typo>
+            </ListItem>
+          </List>
+        </Grid>
+        </>
+      )
+    } else {
+      lists = (
+        <Grid item xs={Number(this.props.gridSize)}>
+        <List component="nav" className={classes.Contact}>
+          <ListItem className={classes.listItem}>
+            <Typo className={classes.Mail} variant='display2'>{this.props.Mail} <i className="fas fa-at"></i></Typo>
+          </ListItem>
+          <ListItem button className={classes.listItem}>
+            <a href={links.LinkedIn}><Typo className={classes.LinkedIn} variant='display2'>{this.props.LinkedIn} <i className="fab fa-linkedin"></i></Typo></a>
+          </ListItem>
+          <ListItem button className={classes.listItem}>
+            <a href={links.Github}><Typo className={classes.Github} variant='display2'>{this.props.Github} <i className="fab fa-github"></i></Typo></a>
+          </ListItem>
+          <ListItem button className={classes.listItem}>
+            <a href={links.Maps}><Typo className={classes.Home} variant='display2'>{this.props.Home} <i className="fas fa-map-marker-alt"></i></Typo></a>
+          </ListItem>
+          <ListItem className={[classes.listItem, classes.lastListItem].join(' ')}>
+            <Typo className={classes.Phone} variant='display2'>{this.props.Phone} <i className="fas fa-mobile-alt"></i></Typo>
+          </ListItem>
+        </List>
+        </Grid>
+      )
+    }
+
+
+    return (
+      <>{lists}</>
+    )
+  }
 }
 
 Contact.propTypes = {
-  classes: propTypes.object.isRequired,
+  classes: propTypes.object.isRequired || propTypes.array.isRequired,
 };
 
 export default withStyles(styles)(Contact)

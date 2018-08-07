@@ -19,7 +19,7 @@ const styles = theme => ({
 const Avatar = (props) => {
   const { classes } = props
   return (
-    <Grid item xs={Number(props.gridSize)} className={classes.AvatarContainer}>
+    <Grid item xs={12} sm={5} md={Number(props.gridSize)} className={classes.AvatarContainer}>
       <div className={classes.AvatarContainer}>
         <MaterialAvatar className={classes.Avatar} alt={props.alt} src={props.src}/>
       </div>

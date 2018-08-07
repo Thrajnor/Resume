@@ -9,6 +9,7 @@ const styles = theme => ({
     flexGrow: 1,
     margin: '4rem auto',
     maxWidth: '79.3688rem',
+    minWidth: '28.8rem',
     minHeight: '112.252rem',
     padding: '2rem',
     position: 'relative',

@@ -11,6 +11,7 @@ const styles = theme => ({
     textAlign: 'left'
   },
   Experience: {
+    marginLeft: '1rem',
     float: 'right'
   }
 });
