@@ -26,23 +26,38 @@ const theme = createMuiTheme({
       '"Segoe UI Symbol"',
     ].join(','),
     fontWeightMedium: 500,
+    display2: {
+      fontSize: '1.7rem',
+      fontStyle: 'italic',
+    },
+    display1: {
+      fontSize: '1.8rem',
+      fontStyle: 'italic',
+    },
     body1: {
-      fontSize: '.9rem',
+      fontSize: '2rem',
       fontWeight: 700,
     },
+    headline: {
+      fontSize: '2.8rem',
+      fontWeight: 700,
+    },
+    title: {
+      fontSize: '2.5rem'
+    },
     body2: {
-      fontSize: '.7rem',
+      fontSize: '1.6rem',
       fontWeight: 400,
     },
     subheading: {
-      fontSize: '.7rem',
+      fontSize: '1.6rem',
       fontStyle: 'italic',
     },
     button: {
       fontStyle: 'italic',
     },
     caption: {
-      fontSize: '.52rem',
+      fontSize: '1.1rem',
       fontStyle: 'italic',
     }
   },
