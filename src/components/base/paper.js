@@ -7,16 +7,11 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    margin: '1.5rem auto',
-    width: '726px',
-    height: '1055px',
-    padding: '1.2rem',
+    margin: '4rem auto',
+    maxWidth: '79.3688rem',
+    minHeight: '112.252rem',
+    padding: '2rem',
     position: 'relative',
-  },
-  paper: {
-    padding: theme.spacing.unit * 2,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
   },
 });
 
