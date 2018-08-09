@@ -53,7 +53,7 @@ const styles = theme => ({
 
 class Contact extends React.Component {
   state = {
-    width: 0, height: 0
+    width: 454, height: 500
   }
 
   componentDidMount() {
@@ -73,7 +73,7 @@ class Contact extends React.Component {
     const { classes } = this.props
     const links = {
       LinkedIn: 'https://www.linkedin.com/in/marcin-zaborowski/',
-      Github: 'https://github.com/Thrajnor',
+      Github: 'https://www.github.com/Thrajnor',
       Maps: 'https://www.google.pl/maps/place/Wroc%C5%82aw/@51.1267432,16.7116858,10z/data=!3m1!4b1!4m5!3m4!1s0x470fe9c2d4b58abf:0xb70956aec205e0f5!8m2!3d51.1078852!4d17.0385376',
     }
 
@@ -84,13 +84,13 @@ class Contact extends React.Component {
     if (typeof window !== 'undefined' && this.state.width < 672 ) {
       lists = (
         <>
-        <Grid item xs={4} sm>
+        <Grid item xs>
           <List component="nav" className={classes.Contact}>
-            <ListItem button className={classes.listItem}>
-              <a href={links.LinkedIn}><Typo className={classes.LinkedIn} variant='display2'><i className={["fab fa-linkedin", classes.bigIcon].join(' ')}></i></Typo></a>
+            <ListItem className={classes.listItem}>
+              <a href={links.LinkedIn}><i className={["fab fa-linkedin", classes.bigIcon, classes.LinkedIn].join(' ')}></i></a>
             </ListItem>
-            <ListItem button className={classes.listItem}>
-              <a href={links.Github}><Typo className={classes.Github} variant='display2'><i className={["fab fa-github", classes.bigIcon].join(' ')}></i></Typo></a>
+            <ListItem className={classes.listItem}>
+              <a href={links.Github}><i className={["fab fa-github", classes.bigIcon, classes.Github].join(' ')}></i></a>
             </ListItem>
           </List>
         </Grid>
@@ -111,7 +111,7 @@ class Contact extends React.Component {
       )
     } else {
       lists = (
-        <Grid item xs={Number(this.props.gridSize)}>
+        <Grid item xs>
         <List component="nav" className={classes.Contact}>
           <ListItem className={classes.listItem}>
             <Typo className={classes.Mail} variant='display2'>{this.props.Mail} <i className="fas fa-at"></i></Typo>
