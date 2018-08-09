@@ -41,7 +41,7 @@ const theme = createMuiTheme({
     ].join(','),
     fontWeightMedium: 500,
     display3: {
-      fontSize: '1.9rem',
+      fontSize: '1.71rem',
       fontWeight: 700,
       color: '#222'
     },
