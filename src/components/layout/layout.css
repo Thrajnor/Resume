@@ -626,3 +626,7 @@ pre tt:after {
     font-size: 62.5%;
   }
 }
+
+.smallTextFix {
+  margin-right: 3rem !important;
+}

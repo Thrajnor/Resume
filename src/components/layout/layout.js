@@ -11,7 +11,7 @@ const theme = createMuiTheme({
     // withWidth component ⚛️
     MuiWithWidth: {
       // Initial width property
-      initialWidth: 'lg', // Breakpoint being globally set 🌎!
+      initialWidth: 'xs', // Breakpoint being globally set 🌎!
     },
   },
   palette: {
@@ -41,12 +41,12 @@ const theme = createMuiTheme({
     ].join(','),
     fontWeightMedium: 500,
     display3: {
-      fontSize: '1.97rem',
+      fontSize: '1.9rem',
       fontWeight: 700,
       color: '#222'
     },
     display2: {
-      fontSize: '1.6rem',
+      fontSize: '1.4rem',
       fontStyle: 'italic',
       height: '2rem'
     },
@@ -59,7 +59,7 @@ const theme = createMuiTheme({
       fontWeight: 700,
     },
     headline: {
-      fontSize: '2.7rem',
+      fontSize: '2.53rem',
       fontWeight: 700,
     },
     title: {

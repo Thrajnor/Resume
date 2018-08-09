@@ -56,7 +56,7 @@ const Skills = (props) => {
     return (
       <Grid item xs={Number(props.gridSizeXS)} sm={Number(props.gridSizeSM)} md={Number(props.gridSize)} key={skill.name}>
         <Typo className={classes.text} variant={skill.variant}>
-          {skill.icon} {skill.name} 
+          {skill.icon} <span className={skill.fix}>{skill.name}</span> 
           {experience(skill.experience)}
         </Typo>
       </Grid>
