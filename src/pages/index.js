@@ -25,7 +25,7 @@ const IndexPage = () => {
                      LinkedIn='linkedin.com/in/marcin-zaborowski/' 
                      Github='github.com/Thrajnor' 
                      Home='Wrocław, Poland' 
-                     Phone='536 486 861'/>
+                     Phone='+48 536 486 861'/>
           </Grid>
         </Grid>
         <Paragraph gridSize='12' subheading="I'm proactive and eager to learn new things through work." />
