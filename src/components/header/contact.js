@@ -100,10 +100,10 @@ class Contact extends React.Component {
               <Typo className={[classes.Mail, classes.root].join(' ')} variant='display2'>{this.props.Mail}</Typo>
             </ListItem>
             <ListItem button className={classes.listItem}>
-              <a href={links.Maps}><Typo className={[classes.Home, classes.root].join(' ')} variant='display2'>{this.props.Home} <i className="fas fa-map-marker-alt"></i></Typo></a>
+              <a href={links.Maps}><Typo className={[classes.Home, classes.root].join(' ')} variant='display2'><i className="fas fa-map-marker-alt"></i> {this.props.Home}</Typo></a>
             </ListItem>
             <ListItem className={[classes.listItem, classes.lastListItem].join(' ')}>
-              <Typo className={[classes.Phone, classes.root].join(' ')} variant='display2'>{this.props.Phone} <i className="fas fa-mobile-alt"></i></Typo>
+              <Typo className={[classes.Phone, classes.root].join(' ')} variant='display2'><i className="fas fa-mobile-alt"></i> {this.props.Phone}</Typo>
             </ListItem>
           </List>
         </Grid>
