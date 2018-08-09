@@ -17,7 +17,7 @@ const IndexPage = () => {
     <Layout>
       <Paper>
         <Avatar gridSize='3' alt='Marcin' src={require('../images/AvatarCV.png')}/>
-        <Grid item xs>
+        <Grid item xs sm={7} md>
           <Grid container spacing={0}>
             <Header gridSize='4' disc='Web Developer' firstName='Marcin' lastName='Zaborowski'></Header>
             <Contact gridSize='5' 

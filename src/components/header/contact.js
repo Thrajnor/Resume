@@ -97,7 +97,7 @@ class Contact extends React.Component {
         <Grid item xs={12}>
           <List component="nav" className={classes.Contact}>
             <ListItem className={classes.listItem}>
-              <Typo className={[classes.Mail, classes.root].join(' ')} variant='display2'>{this.props.Mail} <i className="fas fa-at"></i></Typo>
+              <Typo className={[classes.Mail, classes.root].join(' ')} variant='display2'>{this.props.Mail}</Typo>
             </ListItem>
             <ListItem button className={classes.listItem}>
               <a href={links.Maps}><Typo className={[classes.Home, classes.root].join(' ')} variant='display2'>{this.props.Home} <i className="fas fa-map-marker-alt"></i></Typo></a>

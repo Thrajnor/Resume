@@ -59,7 +59,7 @@ const theme = createMuiTheme({
       fontWeight: 700,
     },
     headline: {
-      fontSize: '2.53rem',
+      fontSize: '2.44rem',
       fontWeight: 700,
     },
     title: {
