@@ -15,6 +15,9 @@ const styles = theme => ({
     [theme.breakpoints.up('lg')]: {
       marginLeft: '2rem'
     },
+  },
+  marginRight: {
+    marginRight: '1.945rem',
   }
 });
 
@@ -58,14 +61,15 @@ const Skills = (props) => {
     )
   }
 
-
+  // Fix classes
+  let fixClasses = [classes.text, classes.marginRight].join(' ')
 
   // make list of skills
   const skills = skillsArray.map((skill) => {
     return (
       <Grid item xs={Number(props.gridSizeXS)} sm={Number(props.gridSizeSM)} md={Number(props.gridSize)} key={skill.name}>
-        <Typo className={classes.text} variant={skill.variant}>
-          {skill.icon} <span className={skill.fix}>{skill.name}</span> 
+        <Typo className={skill.fix === 'mr' ? fixClasses : classes.text} variant={skill.variant}>
+          {skill.icon} <span className={skill.fix}>{skill.name}</span>
           {experience(skill.experience)}
         </Typo>
       </Grid>

@@ -31,19 +31,19 @@ const IndexPage = () => {
         <Paragraph gridSize='12' subheading="I'm proactive and eager to learn new things through work." />
         <Divider gridSize='12' icon={<i className="fas fa-cogs"></i>} title='Skills'/>
           <Skills gridSizeXS='12' gridSizeSM='4' gridSize='3' skills={[
-              {variant: 'display3', icon:<i className="fab fa-html5"></i>, name: 'Html5', experience: '4'},
-              {variant: 'display3', icon:<i className="fab fa-css3-alt"></i>, name: 'Css3', experience: '4', fix:'smallTextFix'},
+              {variant: 'display3', icon:<i className="fab fa-html5"></i>, name: 'Html5', experience: '4', fix:'smallTextFix'},
               {variant: 'display3', icon:<i className="fab fa-git-square"></i>, name: 'Git', experience: '3', fix:'smallTextFix'},
               {variant: 'display3', icon:<i className="fab fa-js-square"></i>, name: 'JavaScript', experience: '3'},
-              {variant: 'display3', icon:<i className="fab fa-react"></i>, name: 'React', experience: '3'},
+              {variant: 'display3', icon:<i className="fab fa-react"></i>, name: 'React', experience: '3', fix:'smallTextFix'},
               {variant: 'display3', icon:<i className="fab fa-sass"></i>, name: 'Sass', experience: '3', fix:'smallTextFix'},
               {variant: 'display3', icon:<i className="fab fa-node-js"></i>, name: 'NodeJs', experience: '2'},
-              {variant: 'display3', icon:<i className="fab fa-vuejs"></i>, name: 'VueJS', experience: '2'},
+              {variant: 'display3', icon:<i className="fab fa-vuejs"></i>, name: 'VueJS', experience: '1', fix:'smallTextFix'},
+              {variant: 'display3', icon:<i className="fab fa-css3-alt"></i>, name: 'Css3', experience: '4', fix:'smallTextFix'},
             ]} />
         <Divider gridSize='12' icon={<i className="fas fa-comments"></i>} title='Languages'/>
           <Skills gridSizeXS='12' gridSizeSM='6' gridSize='6' skills={[
-              {variant: 'display3', icon:'', name: 'English', experience: '5'},
-              {variant: 'display3', icon:'', name: 'Polish', experience: '5'},
+              {variant: 'display3', icon:'', name: 'English', experience: '5', fix:'mr'},
+              {variant: 'display3', icon:'', name: 'Polish', experience: '5', fix:'smallTextFix'},
             ]} />
         <Divider gridSize='12' icon={<i className="fas fa-code"></i>} title='Work Experience'/>
           <Paragraph gridSize='12' title='Freelancing' subTitle='(July 2018 – Present)' />
