@@ -23,7 +23,16 @@ const Skills = (props) => {
   // sorts skillsArray
   const biggerFirst = () => {
     let array = props.skills
-    let skillsArray = array.sort(array.experience)
+    const compare = (a,b) => {
+      if (a.experience < b.experience)
+        return 1;
+      if (a.experience > b.experience)
+        return -1;
+      return 0;
+    }
+
+    let skillsArray = array.sort(compare)
+    
     // skillsArray = skillsArray.reverse()
     return skillsArray
   }
