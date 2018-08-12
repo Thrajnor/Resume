@@ -1,22 +1,24 @@
 import React from 'react'
 
-import Layout from '../components/layout/layout'
-import Paper from '../components/base/paper'
-import Avatar from '../components/header/avatar'
-import Contact from '../components/header/contact'
-import Header from '../components/header/header';
-import Paragraph from '../components/body/paragraph';
-import Divider from '../components/base/divider';
-import Skills from '../components/body/skills';
-import Footer from '../components/body/footer';
+import Layout from 'components/layout/layout'
+import Paper from 'components/base/paper'
+import Avatar from 'components/header/avatar'
+import Contact from 'components/header/contact'
+import Header from 'components/header/header';
+import Paragraph from 'components/body/paragraph';
+import Divider from 'components/base/divider';
+import Skills from 'components/body/skills';
+import Footer from 'components/body/footer';
+import Print from 'components/body/print';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Grid from '@material-ui/core/Grid';
 
 const IndexPage = () => {
   return (
     <Layout>
+      <Print src={require('images/testCV.png')}>Download PDF!</Print>
       <Paper>
-        <Avatar gridSize='3' alt='Marcin' src={require('../images/AvatarCV.png')}/>
+        <Avatar gridSize='3' alt='Marcin' src={require('images/AvatarCV.png')}/>
         <Grid item xs sm={7} md>
           <Grid container spacing={0}>
             <Header gridSize='4' disc='Web Developer' firstName='Marcin' lastName='Zaborowski'></Header>

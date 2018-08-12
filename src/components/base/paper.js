@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    margin: '4rem auto',
+    margin: '1rem auto 0 auto',
     maxWidth: '79.3688rem',
     minWidth: '30.5781rem',
     minHeight: '112.252rem',
