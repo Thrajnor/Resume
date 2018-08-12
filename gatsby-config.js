@@ -3,5 +3,5 @@ module.exports = {
   siteMetadata: {
     title: 'Marcins Resume',
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-resolve-src'],
 }
