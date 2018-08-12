@@ -17,7 +17,9 @@ const styles = theme => ({
     },
   },
   marginRight: {
-    marginRight: '1.945rem',
+    [theme.breakpoints.up('sm')]: {
+      marginRight: '1.945rem',
+    },
   }
 });
 
