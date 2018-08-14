@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import ListItem from '@material-ui/core/ListItem';
 import { withStyles } from '@material-ui/core/styles';
 import Typo from '@material-ui/core/Typography';
-
+import Copy from 'components/base/copy'
 
 
 const styles = theme => ({
@@ -97,7 +97,7 @@ class Contact extends React.Component {
         <Grid item xs={12}>
           <List component="nav" className={classes.Contact}>
             <ListItem className={classes.listItem}>
-              <Typo className={[classes.Mail, classes.root].join(' ')} variant='display2'>{this.props.Mail}</Typo>
+              <Copy><Typo className={[classes.Mail, classes.root].join(' ')} variant='display2'>{this.props.Mail}</Typo></Copy>
             </ListItem>
             <ListItem button className={classes.listItem}>
               <a href={links.Maps}><Typo className={[classes.Home, classes.root].join(' ')} variant='display2'><i className="fas fa-map-marker-alt"></i> {this.props.Home}</Typo></a>
@@ -114,7 +114,7 @@ class Contact extends React.Component {
         <Grid item xs>
         <List component="nav" className={classes.Contact}>
           <ListItem className={classes.listItem}>
-            <Typo className={classes.Mail} variant='display2'>{this.props.Mail} <i className="fas fa-at"></i></Typo>
+            <Copy copy={this.props.Mail}><Typo className={classes.Mail} variant='display2'>{this.props.Mail} <i className="fas fa-at"></i></Typo></Copy>
           </ListItem>
           <ListItem button className={classes.listItem}>
             <a href={links.LinkedIn}><Typo className={classes.LinkedIn} variant='display2'>{this.props.LinkedIn} <i className="fab fa-linkedin"></i></Typo></a>
