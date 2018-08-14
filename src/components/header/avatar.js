@@ -3,7 +3,6 @@ import React from 'react';
 import propTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
-
 const styles = theme => ({
   AvatarContainer: {
     maxWidth: '100%',
@@ -18,17 +17,43 @@ const styles = theme => ({
 });
 
 class Avatar extends React.Component{
-  state = {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false,
+      isWindowDefined: false
+    };
+  }
+  componentDidMount() {
+    this.setState({isWindowDefined: true})
   }
   render() {
+    let lightBox = ''
     const { classes } = this.props
+    const { isOpen } = this.state;
+    
+    if (this.state.isWindowDefined) {
+      let LightBox = require('react-image-lightbox').default
+      import('react-image-lightbox/style.css')
+      lightBox = (
+        isOpen && window && (
+          <LightBox
+            mainSrc={require('images/fullAvatar.jpg')}
+            onCloseRequest={() => this.setState({ isOpen: false })}
+          />
+        )
+      )
+    } 
+
     return (
-      <Grid item xs={12} sm={5} md={Number(this.props.gridSize)} className={classes.AvatarContainer}>
-        <div className={classes.AvatarContainer}>
-          <MaterialAvatar className={classes.Avatar} alt={this.props.alt} src={this.props.src}/>
-        </div>
-      </Grid>
+      <>
+        <Grid item xs={12} sm={5} md={Number(this.props.gridSize)} className={classes.AvatarContainer}>
+          <div className={classes.AvatarContainer}>
+            <MaterialAvatar className={classes.Avatar} onClick={() => this.setState({ isOpen: true })} alt={this.props.alt} src={this.props.src}/>
+          </div>
+        </Grid>
+        {lightBox}
+      </>
     )
   }
 }

@@ -5,6 +5,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^1.4.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "gatsby": "next",
     "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-resolve-src": "2.0.0-beta.1",
