@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { Provider as AlertProvider } from 'react-alert'
+import AlertTemplate from 'react-alert-template-oldschool-dark'
 
 import './layout.css'
 
@@ -91,6 +93,11 @@ const theme = createMuiTheme({
   },
 });
 
+const options = {
+  position: 'bottom center',
+  offset: '3rem',
+}
+
 const Layout = ({ children, data }) => (
   <StaticQuery
     query={graphql`
@@ -117,7 +124,9 @@ const Layout = ({ children, data }) => (
           }}
         >
           <MuiThemeProvider theme={theme}>
-            {children}
+            <AlertProvider template={AlertTemplate} {...options}>
+              {children}
+            </AlertProvider>
           </MuiThemeProvider>
         </div>
       </>
