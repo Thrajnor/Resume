@@ -23,8 +23,8 @@ const IndexPage = () => {
           <Grid container spacing={0}>
             <Header gridSize='4' disc='Web Developer' firstName='Marcin' lastName='Zaborowski'></Header>
             <Contact gridSize='5' 
-                     Mail='marcin.zaborowski@protonmail.com' 
-                     LinkedIn='linkedin.com/in/marcin-zaborowski/' 
+                     Mail='marcin@zaborowski.pro' 
+                     LinkedIn='linkedin.com/in/marcin-zaborowski' 
                      Github='github.com/Thrajnor' 
                      Home='Wrocław, Poland' 
                      Phone='+48 536 486 861'/>
