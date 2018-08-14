@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
+import Message from 'components/base/messages';
 
 const styles = {
   button: {
@@ -14,7 +15,7 @@ const Print = (props) => {
   const { classes } = props
   return (
     <>
-      <Button className={classes.button} size='medium'><a href={props.src} download="CV-MarcinZaborowski.png">{props.children}</a></Button>
+      <Message message="I've downloaded you a pdf!"><Button className={classes.button} size='medium'><a href={props.src} download="CV-MarcinZaborowski.png">{props.children}</a></Button></Message>
     </>
   )
 }
