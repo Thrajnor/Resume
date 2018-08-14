@@ -17,15 +17,20 @@ const styles = theme => ({
   }
 });
 
-const Avatar = (props) => {
-  const { classes } = props
-  return (
-    <Grid item xs={12} sm={5} md={Number(props.gridSize)} className={classes.AvatarContainer}>
-      <div className={classes.AvatarContainer}>
-        <MaterialAvatar className={classes.Avatar} alt={props.alt} src={props.src}/>
-      </div>
-    </Grid>
-  )
+class Avatar extends React.Component{
+  state = {
+
+  }
+  render() {
+    const { classes } = this.props
+    return (
+      <Grid item xs={12} sm={5} md={Number(this.props.gridSize)} className={classes.AvatarContainer}>
+        <div className={classes.AvatarContainer}>
+          <MaterialAvatar className={classes.Avatar} alt={this.props.alt} src={this.props.src}/>
+        </div>
+      </Grid>
+    )
+  }
 }
 
 Avatar.propTypes = {
