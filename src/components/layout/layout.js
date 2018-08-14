@@ -40,6 +40,13 @@ const theme = createMuiTheme({
       '"Segoe UI Symbol"',
     ].join(','),
     fontWeightMedium: 500,
+    display4: {
+      fontSize: '1.1rem',
+      fontStyle: 'italic',
+      fontWeight: '400',
+      margin: '0px',
+      padding: '0px'
+    },
     display3: {
       fontSize: '1.71rem',
       fontWeight: 700,
@@ -77,8 +84,9 @@ const theme = createMuiTheme({
       fontStyle: 'italic',
     },
     caption: {
-      fontSize: '1.1rem',
-      fontStyle: 'italic',
+      fontSize: '1.2rem',
+      fontWeight: 700,
+      color: '#fff'
     }
   },
 });
