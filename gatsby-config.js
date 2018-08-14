@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: "/Resume",
   siteMetadata: {
-    title: 'Marcins Resume',
+    title: "Marcin's Resume",
   },
   plugins: ['gatsby-plugin-react-helmet', 'gatsby-plugin-resolve-src'],
 }
