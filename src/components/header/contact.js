@@ -74,7 +74,7 @@ class Contact extends React.Component {
     const { classes } = this.props
     const links = {
       LinkedIn: 'https://www.linkedin.com/in/marcin-zaborowski/',
-      Github: 'https://www.github.com/Thrajnor',
+      Github: 'https://www.github.com/Thrajnor/',
       Maps: 'https://www.google.pl/maps/place/Wroc%C5%82aw/@51.1267432,16.7116858,10z/data=!3m1!4b1!4m5!3m4!1s0x470fe9c2d4b58abf:0xb70956aec205e0f5!8m2!3d51.1078852!4d17.0385376',
     }
 
@@ -98,7 +98,7 @@ class Contact extends React.Component {
         <Grid item xs={12}>
           <List component="nav" className={classes.Contact}>
             <ListItem className={classes.listItem}>
-              <Copy copy={this.props.mail}><Message message='copy'><Typo className={[classes.Mail, classes.root].join(' ')} variant='display2'>{this.props.Mail}</Typo></Message></Copy>
+              <Copy copy={this.props.mail}><Message message='copy'><Typo className={[classes.Mail, classes.root].join(' ')} variant='display2'><i className="fas fa-at"></i> {this.props.Mail}</Typo></Message></Copy>
             </ListItem>
             <ListItem button className={classes.listItem}>
               <a href={links.Maps}><Typo className={[classes.Home, classes.root].join(' ')} variant='display2'><i className="fas fa-map-marker-alt"></i> {this.props.Home}</Typo></a>
@@ -114,11 +114,11 @@ class Contact extends React.Component {
       lists = (
         <Grid item xs>
         <List component="nav" className={classes.Contact}>
-          <ListItem className={classes.listItem}>
-            <Copy copy={this.props.Mail}><Message message='copy'><Typo className={classes.Mail} variant='display2'>{this.props.Mail} <i className="fas fa-at"></i></Typo></Message></Copy>
-          </ListItem>
           <ListItem button className={classes.listItem}>
             <a href={links.LinkedIn}><Typo className={classes.LinkedIn} variant='display2'>{this.props.LinkedIn} <i className="fab fa-linkedin"></i></Typo></a>
+          </ListItem>
+          <ListItem className={classes.listItem}>
+            <Copy copy={this.props.Mail}><Message message='copy'><Typo className={classes.Mail} variant='display2'>{this.props.Mail} <i className="fas fa-at"></i></Typo></Message></Copy>
           </ListItem>
           <ListItem button className={classes.listItem}>
             <a href={links.Github}><Typo className={classes.Github} variant='display2'>{this.props.Github} <i className="fab fa-github"></i></Typo></a>
