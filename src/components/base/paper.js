@@ -14,6 +14,9 @@ const styles = theme => ({
     padding: '3rem',
     position: 'relative',
   },
+  Grid: {
+    minHeight: '106.252rem'
+  }
 });
 
 const Paper = (props) => {
@@ -22,7 +25,7 @@ const Paper = (props) => {
     <MaterialPaper
     className={classes.root}
     >
-      <Grid container spacing={24}>
+      <Grid container spacing={24} className={classes.Grid}>
         {props.children}
       </Grid>
     </MaterialPaper>

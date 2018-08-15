@@ -6,15 +6,18 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   RODO: {
     padding: '0 2rem',
+    marginTop: '2rem',
     marginBottom: '3rem',
+    [theme.breakpoints.up('sm')]: {
+      marginTop: '5rem',
+    },
     [theme.breakpoints.down('sm')]: {
       padding: '1rem 3rem 0 3rem',
     },
   },
 footerBox: {
-  position: 'absolute',
-  bottom: '3rem',
-  margin: '0 3rem'
+  display: 'inline-block',
+  alignSelf: 'flex-end',
 }
 });
 
