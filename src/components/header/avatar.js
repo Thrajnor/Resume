@@ -8,11 +8,24 @@ const styles = theme => ({
     maxWidth: '100%',
     height: 'auto',
   },
+  Circle: {
+    width: '100%',
+    height: '100%',
+    margin: 0,
+    boxShadow: '0px .5px 5px 0px rgba(0, 0, 0, 0.2), 0px .25px 2px 0px rgba(0, 0, 0, 0.14), 0px .125px 1px -2px rgba(0, 0, 0, 0.12);',
+    borderRadius: '50%'
+  },
   Avatar: {
     width: '100%',
     height: '100%',
     margin: 0,
-    boxShadow: '0px .5px 5px 0px rgba(0, 0, 0, 0.2), 0px .25px 2px 0px rgba(0, 0, 0, 0.14), 0px .125px 1px -2px rgba(0, 0, 0, 0.12);'
+    transition: 'all .5s',
+    cursor: 'pointer',
+    '&:hover': {
+      filter: 'brightness(95%)',
+      transform: 'scale(1.05)',
+      boxShadow: '0px .5px 3px 0px rgba(0, 0, 0, .7)',
+    }
   }
 });
 
@@ -49,7 +62,9 @@ class Avatar extends React.Component{
       <>
         <Grid item xs={12} sm={5} md={Number(this.props.gridSize)} className={classes.AvatarContainer}>
           <div className={classes.AvatarContainer}>
-            <MaterialAvatar className={classes.Avatar} onClick={() => this.setState({ isOpen: true })} alt={this.props.alt} src={this.props.src}/>
+            <div className={classes.Circle}>
+              <MaterialAvatar className={classes.Avatar} onClick={() => this.setState({ isOpen: true })} alt={this.props.alt} src={this.props.src}/>
+            </div>
           </div>
         </Grid>
         {lightBox}
