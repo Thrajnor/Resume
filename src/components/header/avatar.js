@@ -19,7 +19,7 @@ const styles = theme => ({
     width: '100%',
     height: '100%',
     margin: 0,
-    transition: 'all .5s',
+    transition: 'filter transform boxShadow .5s',
     cursor: 'pointer',
     '&:hover': {
       filter: 'brightness(95%)',
