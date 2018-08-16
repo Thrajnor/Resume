@@ -4,6 +4,8 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import Typo from '@material-ui/core/Typography';
 import Divider from 'components/base/divider';
+import Collapse from '@material-ui/core/Collapse';
+import MediaQuery from 'react-responsive';
 
 
 
@@ -24,8 +26,18 @@ const styles = theme => ({
   }
 });
 class Skills extends React.Component {
+  state = {
+    checked: false,
+  };
+
+  handleChange = () => {
+    this.setState(state => ({ checked: !state.checked }));
+  };
+
+
 
   render() {
+    const { checked } = this.state;
     const { classes } = this.props
     // sorts skillsArray
     const biggerFirst = () => {
@@ -83,11 +95,29 @@ class Skills extends React.Component {
 
     return (
         <>
-          <Divider gridSize='12' icon={this.props.icon} title={this.props.title}/>
           <Grid item xs={12}>
-            <Grid container spacing={0} className='slide-toggle__box-inner' style={{ opacity: Math.max(0.5, range) }}>
-              {skills}
-            </Grid>
+            <MediaQuery query='(max-width: 454px)'>
+              <Grid container spacing={24}>
+                <Divider gridSize='12' nameClass={'clickable'} click={this.handleChange} icon={this.props.icon} title={this.props.title}/>
+                <Grid item xs={12}>
+                  <Collapse in={checked}>
+                    <Grid container spacing={0}>
+                      {skills}
+                    </Grid>
+                  </Collapse>
+                </Grid>
+              </Grid>
+            </MediaQuery>
+            <MediaQuery query='(min-width: 455px)'>
+              <Grid container spacing={24}>
+                <Divider gridSize='12' icon={this.props.icon} title={this.props.title}/>
+                <Grid item xs={12}>
+                  <Grid container spacing={0}>
+                    {skills}
+                  </Grid>
+                </Grid>
+              </Grid>
+            </MediaQuery>
           </Grid>
         </>
     )

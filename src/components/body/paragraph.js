@@ -4,10 +4,9 @@ import Typo from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import propTypes from 'prop-types';
 import Divider from 'components/base/divider';
-import windowSize from 'react-window-size';
 import Collapse from '@material-ui/core/Collapse';
+import MediaQuery from 'react-responsive';
 
-let collapse = false
 const styles = theme => ({
   date: {
     fontWeight: '400',
@@ -16,49 +15,51 @@ const styles = theme => ({
 });
 
 class Paragraph extends React.Component {
+  state = {
+    checked: false,
+  };
+
+  handleChange = () => {
+    this.setState(state => ({ checked: !state.checked }));
+  };
+
   render() {
     const { classes } = this.props
+    const { checked } = this.state
     let paragraph
-    // collapse when mobile
-    if (this.props.windowWidth < 454 && this.props.windowWidth !== 0) {
-      console.log (this.props.windowWidth)
-      collapse = true
-    } else if (this.props.windowWidth !== 0) {
-      collapse = false
-    }
 
 
     // make header paragraph work
     
     if (this.props.title) {
-      console.log(collapse)
       paragraph = (
-        <SlideToggle
-        duration={500}
-        collapsed={collapse}>
-          {({onToggle, setCollapsibleElement, range}) => (
             <>
-              <Divider gridSize='12' icon={this.props.icon} title={this.props.title} click={onToggle}/>
+            <MediaQuery query='(max-width: 454px)'>
+              <Divider gridSize='12' nameClass={'clickable'} click={this.handleChange} icon={this.props.icon} title={this.props.title}/>
+  
               <Grid item xs={Number(this.props.gridSize)}>
-                <div className="slide-toggle__box" ref={setCollapsibleElement} style={{opacity: Math.max(0.5, range)}}>
+                <Collapse in={checked}>
                   <Typo variant='body1'>{this.props.name} <em className={classes.date}>{this.props.date}</em></Typo>
                   <Typo variant='subheading'>{this.props.subheading}</Typo>
-                </div>
+                </Collapse>
               </Grid>
+            </MediaQuery>
+            <MediaQuery query='(min-width: 454px)'>
+              <Divider gridSize='12' icon={this.props.icon} title={this.props.title}/>
+  
+              <Grid item xs={Number(this.props.gridSize)}>
+                <Typo variant='body1'>{this.props.name} <em className={classes.date}>{this.props.date}</em></Typo>
+                <Typo variant='subheading'>{this.props.subheading}</Typo>
+              </Grid>
+            </MediaQuery>
             </>
-          )}
-        </SlideToggle>
       )
     } else {
       paragraph = (
         <>
-          <Divider gridSize='12' icon={this.props.icon} title={this.props.title}/>
-
           <Grid item xs={Number(this.props.gridSize)}>
-            <Collapse>
-              <Typo variant='body1'>{this.props.name} <em className={classes.date}>{this.props.date}</em></Typo>
-              <Typo variant='subheading'>{this.props.subheading}</Typo>
-            </Collapse>
+            <Typo variant='body1'>{this.props.name} <em className={classes.date}>{this.props.date}</em></Typo>
+            <Typo variant='subheading'>{this.props.subheading}</Typo>
           </Grid>
         </>
       )
@@ -76,4 +77,4 @@ Paragraph.propTypes = {
   classes: propTypes.object.isRequired,
 };
 
-export default windowSize(withStyles(styles)(Paragraph))
+export default withStyles(styles)(Paragraph)
