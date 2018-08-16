@@ -19,7 +19,8 @@
     "react-download-link": "^2.2.0",
     "react-helmet": "^5.2.0",
     "react-image-lightbox": "^5.0.0",
-    "react-transition-group": "^2.4.0"
+    "react-responsive": "^5.0.0",
+    "react-window-size": "^1.2.0"
   },
   "keywords": [
     "gatsby"
