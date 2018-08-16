@@ -16,11 +16,19 @@ const styles = {
 
 const Divider = (props) => {
   const { classes } = props
-  return (
-    <Grid item xs={Number(props.gridSize)}>
+  let grid
+  if (props.title) {
+    grid =(
+      <Grid item className={props.nameClass} xs={Number(props.gridSize)} onClick={props.click}>
         <Typo variant='title'>{props.icon} {props.title}</Typo>
         <hr className={classes.divider} />
-    </Grid>
+      </Grid>
+    )
+  }
+  return (
+    <>
+    {grid}
+    </>
   )
 }
 
