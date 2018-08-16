@@ -7,6 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typo from '@material-ui/core/Typography';
 import Copy from 'components/base/copy';
 import Message from 'components/base/messages';
+import windowSize from 'react-window-size';
 
 
 const styles = theme => ({
@@ -53,22 +54,6 @@ const styles = theme => ({
 });
 
 class Contact extends React.Component {
-  state = {
-    width: 454, height: 500
-  }
-
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
-  }
-  
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
-  }
-  
-  updateWindowDimensions = () => {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
-  }
 
   render() {
     const { classes } = this.props
@@ -82,7 +67,7 @@ class Contact extends React.Component {
 
     let lists
 
-    if (typeof window !== 'undefined' && this.state.width < 672 ) {
+    if (typeof window !== 'undefined' && this.props.windowWidth < 672 ) {
       lists = (
         <>
         <Grid item xs>
@@ -145,4 +130,4 @@ Contact.propTypes = {
   classes: propTypes.object.isRequired || propTypes.array.isRequired,
 };
 
-export default withStyles(styles)(Contact)
+export default windowSize(withStyles(styles)(Contact))
