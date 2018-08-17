@@ -15,7 +15,11 @@ const Print = (props) => {
   const { classes } = props
   return (
     <>
-      <Message message="I've downloaded you a pdf!"><Button className={classes.button} size='medium'><a href={props.src} download="CV-MarcinZaborowski.png">{props.children}</a></Button></Message>
+      <Message message="I've downloaded you a pdf!">
+        <Button className={classes.button} size='medium'>
+          <a href={props.src} download="CV-MarcinZaborowski.pdf">{props.children}</a>
+        </Button>
+      </Message>
     </>
   )
 }

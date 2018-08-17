@@ -15,7 +15,7 @@ import Grid from '@material-ui/core/Grid';
 const IndexPage = () => {
   return (
     <Layout>
-      <Print src={require('images/testCV.png')}>Download PDF!</Print>
+      <Print src={require('images/CV.pdf')}>Download PDF!</Print>
       <Paper>
         <Avatar gridSize='3' alt='Marcin' src={require('images/AvatarCV.png')}/>
         <Grid item xs sm={7} md>
