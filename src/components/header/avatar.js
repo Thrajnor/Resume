@@ -19,12 +19,12 @@ const styles = theme => ({
     width: '100%',
     height: '100%',
     margin: 0,
-    transition: 'filter transform boxShadow .5s',
+    transition: 'filter .5s, transform .5s, box-shadow .5s',
     cursor: 'pointer',
     '&:hover': {
-      filter: 'brightness(95%)',
-      transform: 'scale(1.05)',
-      boxShadow: '0px .5px 3px 0px rgba(0, 0, 0, .7)',
+      filter: 'brightness(103%)',
+      transform: 'scale(1.1)',
+      boxShadow: '0px .5px 20px 0px rgba(0, 0, 0, .2)',
     }
   }
 });

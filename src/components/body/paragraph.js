@@ -12,6 +12,12 @@ const styles = theme => ({
     fontWeight: '400',
     fontSize: '1.5rem',
   },
+  marginRight: {
+    [theme.breakpoints.up('sm')]: {
+      marginRight: '.9725rem',
+      marginLeft: '.9725rem'
+    },
+  }
 });
 
 class Paragraph extends React.Component {
@@ -28,6 +34,14 @@ class Paragraph extends React.Component {
     const { checked } = this.state
     let paragraph
 
+    // caret (triangle) work
+    let caret
+    if (this.state.checked === false) {
+      caret = 'fas fa-caret-right'
+    } else if (this.state.checked === true) {
+      caret = 'fas fa-caret-down'
+    }
+
 
     // make header paragraph work
     
@@ -35,7 +49,7 @@ class Paragraph extends React.Component {
       paragraph = (
             <>
             <MediaQuery query='(max-width: 454px)'>
-              <Divider gridSize='12' nameClass={'clickable'} click={this.handleChange} icon={this.props.icon} title={this.props.title}/>
+              <Divider gridSize='12' nameClass={'clickable'} click={this.handleChange} caret={caret} icon={this.props.icon} title={this.props.title}/>
   
               <Grid item xs={Number(this.props.gridSize)}>
                 <Collapse in={checked}>
@@ -47,8 +61,8 @@ class Paragraph extends React.Component {
             <MediaQuery query='(min-width: 454px)'>
               <Divider gridSize='12' icon={this.props.icon} title={this.props.title}/>
   
-              <Grid item xs={Number(this.props.gridSize)}>
-                <Typo variant='body1'>{this.props.name} <em className={classes.date}>{this.props.date}</em></Typo>
+              <Grid item xs={Number(this.props.gridSize)} className={classes.marginRight}>
+                <Typo variant='body1' className={classes.text}>{this.props.name} <em className={classes.date}>{this.props.date}</em></Typo>
                 <Typo variant='subheading'>{this.props.subheading}</Typo>
               </Grid>
             </MediaQuery>
@@ -57,7 +71,7 @@ class Paragraph extends React.Component {
     } else {
       paragraph = (
         <>
-          <Grid item xs={Number(this.props.gridSize)}>
+          <Grid item xs={Number(this.props.gridSize)} className={classes.marginRight}>
             <Typo variant='body1'>{this.props.name} <em className={classes.date}>{this.props.date}</em></Typo>
             <Typo variant='subheading'>{this.props.subheading}</Typo>
           </Grid>

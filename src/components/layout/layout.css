@@ -622,14 +622,16 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
-
-.smallTextFix {
-  margin-right: 3rem !important;
-}
-
 /* clickable */
 
 .clickable {
   cursor: pointer;
   user-select: none;
+}
+
+.fa-caret-right {
+  width: 1.2rem
+}
+.fa-caret-down {
+  width: 1.2rem
 }

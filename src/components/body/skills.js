@@ -11,17 +11,15 @@ import MediaQuery from 'react-responsive';
 
 const styles = theme => ({
   text: {
-    textAlign: 'left',
+    textAlign: 'left'
   },
   Experience: {
-    float: 'right',
-    [theme.breakpoints.up('lg')]: {
-      marginLeft: '2rem'
-    },
+    float: 'right'
   },
   marginRight: {
     [theme.breakpoints.up('sm')]: {
-      marginRight: '1.945rem',
+      marginRight: '.9725rem',
+      marginLeft: '.9725rem'
     },
   }
 });
@@ -84,7 +82,7 @@ class Skills extends React.Component {
     const skills = skillsArray.map((skill) => {
       return (
         <Grid item xs={Number(this.props.gridSizeXS)} sm={Number(this.props.gridSizeSM)} md={Number(this.props.gridSize)} key={skill.name}>
-          <Typo className={skill.fix === 'mr' ? fixClasses : classes.text} variant={skill.variant}>
+          <Typo className={fixClasses} variant={skill.variant}>
             {skill.icon} <span className={skill.fix}>{skill.name}</span>
             {experience(skill.experience)}
           </Typo>
@@ -92,13 +90,20 @@ class Skills extends React.Component {
       )
     })
 
+    // caret (triangle) work
+    let caret
+    if (this.state.checked === false) {
+      caret = 'fas fa-caret-right'
+    } else if (this.state.checked === true) {
+      caret = 'fas fa-caret-down'
+    }
 
     return (
         <>
           <Grid item xs={12}>
             <MediaQuery query='(max-width: 454px)'>
               <Grid container spacing={24}>
-                <Divider gridSize='12' nameClass={'clickable'} click={this.handleChange} icon={this.props.icon} title={this.props.title}/>
+                <Divider gridSize='12' nameClass={'clickable'} click={this.handleChange} caret={caret} icon={this.props.icon} title={this.props.title}/>
                 <Grid item xs={12}>
                   <Collapse in={checked}>
                     <Grid container spacing={0}>

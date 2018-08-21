@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import Typo from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 import propTypes from 'prop-types';
+import MediaQuery from 'react-responsive';
 
 const styles = {
   divider: {
@@ -14,14 +15,22 @@ const styles = {
   }
 }
 
+
+
 const Divider = (props) => {
   const { classes } = props
   let grid
   if (props.title) {
     grid =(
       <Grid item className={props.nameClass} xs={Number(props.gridSize)} onClick={props.click}>
-        <Typo variant='title'>{props.icon} {props.title}</Typo>
-        <hr className={classes.divider} />
+        <MediaQuery query='(max-width: 454px)'>
+          <Typo variant='title'><i className={props.caret}></i> {props.icon} {props.title}</Typo>
+          <hr className={classes.divider} />
+        </MediaQuery>
+        <MediaQuery query='(min-width: 455px)'>
+          <Typo variant='title'>{props.icon} {props.title}</Typo>
+          <hr className={classes.divider} />
+        </MediaQuery>
       </Grid>
     )
   }

@@ -29,7 +29,7 @@ const theme = createMuiTheme({
   typography: {
     // Use the system font instead of the default Roboto font.
     fontFamily: [
-      'Merienda',
+      'Muli',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
@@ -50,12 +50,12 @@ const theme = createMuiTheme({
       padding: '0px'
     },
     display3: {
-      fontSize: '1.71rem',
+      fontSize: '2.1rem',
       fontWeight: 700,
       color: '#222'
     },
     display2: {
-      fontSize: '1.4rem',
+      fontSize: '1.3rem',
       fontStyle: 'italic',
       height: '2rem'
     },
@@ -64,7 +64,7 @@ const theme = createMuiTheme({
       fontStyle: 'italic',
     },
     body1: {
-      fontSize: '2rem',
+      fontSize: '2.1rem',
       fontWeight: 700,
     },
     headline: {
@@ -72,7 +72,8 @@ const theme = createMuiTheme({
       fontWeight: 700,
     },
     title: {
-      fontSize: '2.5rem'
+      fontSize: '2.3rem',
+      fontWeight: 700,
     },
     body2: {
       fontSize: '1.6rem',

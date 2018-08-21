@@ -9,25 +9,21 @@ const styles = theme => ({
     marginTop: '2rem',
     marginBottom: '3rem',
     [theme.breakpoints.up('sm')]: {
-      marginTop: '5rem',
+      marginTop: '7rem',
     },
     [theme.breakpoints.down('sm')]: {
       padding: '1rem 3rem 0 3rem',
     },
   },
-footerBox: {
-  display: 'inline-block',
-  alignSelf: 'flex-end',
-}
 });
 
 const Footer = (props) => {
   const { classes } = props
   return (
-    <div className={classes.footerBox}>
+    <>
       <Typo variant='display4' className={classes.RODO}>{props.disc}</Typo>
       <Grid item xs={12}><Typo variant='display4' align='right'>{props.powered} {props.poweredIcon}</Typo></Grid>
-    </div>
+    </>
   )
 }
 
