@@ -7,7 +7,8 @@ const styles = {
   button: {
     margin: '1rem auto 0 auto',
     display: 'block',
-    padding: '0 3rem'
+    padding: '0 3rem',
+    fontSize: '1.5rem'
   }
 }
 
@@ -17,7 +18,7 @@ const Print = (props) => {
     <>
       <Message message="I've downloaded you a pdf!">
         <Button className={classes.button} size='medium'>
-          <a href={props.src} download="CV-MarcinZaborowski.pdf">{props.children}</a>
+          <a href={props.src} download={props.downloadName}>{props.children}</a>
         </Button>
       </Message>
     </>

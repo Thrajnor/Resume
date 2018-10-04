@@ -40,7 +40,7 @@ class Skills extends React.Component {
     // sorts skillsArray
     const biggerFirst = () => {
       let array = this.props.skills
-      const compare = (a,b) => {
+      const compare = (a, b) => {
         if (a.experience < b.experience)
           return 1;
         if (a.experience > b.experience)
@@ -49,7 +49,7 @@ class Skills extends React.Component {
       }
 
       let skillsArray = array.sort(compare)
-      
+
       // skillsArray = skillsArray.reverse()
       return skillsArray
     }
@@ -57,15 +57,15 @@ class Skills extends React.Component {
 
     // make experience radio
     const experience = (num) => {
-      let checked = [] 
+      let checked = []
       let unchecked = []
       if (num === '') {
         return
       }
-      for(let i = 0; i < num; i++) {
+      for (let i = 0; i < num; i++) {
         checked.push(<i className="material-icons" key={i}>radio_button_checked</i>)
       }
-      for(let i = 0; i < (5 - num); i++) {
+      for (let i = 0; i < (5 - num); i++) {
         checked.push(<i className="material-icons" key={i + 5}>radio_button_unchecked</i>)
       }
       return (
@@ -83,7 +83,7 @@ class Skills extends React.Component {
       return (
         <Grid item xs={Number(this.props.gridSizeXS)} sm={Number(this.props.gridSizeSM)} md={Number(this.props.gridSize)} key={skill.name}>
           <Typo className={fixClasses} variant={skill.variant}>
-            {skill.icon} <span className={skill.fix}>{skill.name}</span>
+            <span>{skill.icon} <span className={skill.fix}>{skill.name}</span></span>
             {experience(skill.experience)}
           </Typo>
         </Grid>
@@ -99,32 +99,32 @@ class Skills extends React.Component {
     }
 
     return (
-        <>
-          <Grid item xs={12}>
-            <MediaQuery query='(max-width: 454px)'>
-              <Grid container spacing={24}>
-                <Divider gridSize='12' nameClass={'clickable'} click={this.handleChange} caret={caret} icon={this.props.icon} title={this.props.title}/>
-                <Grid item xs={12}>
-                  <Collapse in={checked}>
-                    <Grid container spacing={0}>
-                      {skills}
-                    </Grid>
-                  </Collapse>
-                </Grid>
-              </Grid>
-            </MediaQuery>
-            <MediaQuery query='(min-width: 455px)'>
-              <Grid container spacing={24}>
-                <Divider gridSize='12' icon={this.props.icon} title={this.props.title}/>
-                <Grid item xs={12}>
+      <>
+        <Grid item xs={12}>
+          <MediaQuery query='(max-width: 454px)'>
+            <Grid container spacing={16}>
+              <Divider gridSize='12' nameClass={'clickable'} click={this.handleChange} caret={caret} icon={this.props.icon} title={this.props.title} />
+              <Grid item xs={12}>
+                <Collapse in={checked}>
                   <Grid container spacing={0}>
                     {skills}
                   </Grid>
+                </Collapse>
+              </Grid>
+            </Grid>
+          </MediaQuery>
+          <MediaQuery query='(min-width: 455px)'>
+            <Grid container spacing={16}>
+              <Divider gridSize='12' icon={this.props.icon} title={this.props.title} />
+              <Grid item xs={12}>
+                <Grid container spacing={0}>
+                  {skills}
                 </Grid>
               </Grid>
-            </MediaQuery>
-          </Grid>
-        </>
+            </Grid>
+          </MediaQuery>
+        </Grid>
+      </>
     )
   }
 }

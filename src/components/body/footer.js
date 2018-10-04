@@ -5,11 +5,11 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   RODO: {
-    padding: '0 2rem',
+    padding: '0 3rem',
     marginTop: '2rem',
-    marginBottom: '3rem',
+    marginBottom: '.5rem',
     [theme.breakpoints.up('sm')]: {
-      marginTop: '7rem',
+      marginTop: '1.5rem',
     },
     [theme.breakpoints.down('sm')]: {
       padding: '1rem 3rem 0 3rem',

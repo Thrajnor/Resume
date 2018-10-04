@@ -17,7 +17,7 @@ const theme = createMuiTheme({
     },
   },
   palette: {
-    primary:{ main: '#6e5494' }
+    primary: { main: '#6e5494' }
   },
   breakpoints: {
     values: {
@@ -66,6 +66,7 @@ const theme = createMuiTheme({
     body1: {
       fontSize: '2.1rem',
       fontWeight: 700,
+      lineHeight: '2rem'
     },
     headline: {
       fontSize: '2.44rem',

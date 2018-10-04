@@ -23,9 +23,9 @@ const Paper = (props) => {
   const { classes } = props
   return (
     <MaterialPaper
-    className={classes.root}
+      className={classes.root}
     >
-      <Grid container spacing={24} className={classes.Grid}>
+      <Grid container spacing={16} className={classes.Grid}>
         {props.children}
       </Grid>
     </MaterialPaper>
